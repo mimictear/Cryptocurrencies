@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct CryptomarketApp: App {
+    
+    @State private var appNavigation = AppNavigation()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GlobalMarketView()
+                .environment(appNavigation)
         }
     }
 }
